@@ -1,0 +1,24 @@
+.PersonalDescription {
+  line-height: 0;
+
+  .PersonalDescription__subtext {
+    border-bottom: 1px solid gray;
+    bottom: 0;
+    color: gray;
+    display: block;
+    line-height: 1;
+    margin: 0 0 16px;
+    padding: 0 0 8px;
+  }
+
+  .PersonalDescription__list {
+    list-style-type: hiranagi;
+
+    li {
+      font-size: 0.9rem;
+      line-height: 1.25rem;
+      list-style-type: square;
+      margin: 0 0 8px;
+    }
+  }
+}

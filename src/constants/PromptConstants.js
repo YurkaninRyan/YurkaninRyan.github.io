@@ -1,0 +1,5 @@
+export default {
+  BIO_PROMPT: 'BIO_PROMPT',
+  INITIAL_GREETING: 'INITIAL_GREETING',
+  THEME: 'THEME',
+};

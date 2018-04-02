@@ -1,0 +1,26 @@
+.Prompter {
+  background-color: white;
+  bottom: 16px;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+  margin: 0;
+  margin: 16px 0 0 16px;
+  max-width: 30rem;
+  padding: 16px 24px;
+  position: fixed;
+  right: 16px;
+  z-index: 1;
+
+  & > p {
+    margin: 0 0 8px;
+  }
+
+  & > p:last-child {
+    margin: 0;
+  }
+
+  p,
+  span,
+  strong {
+    line-height: 1.2rem;
+  }
+}

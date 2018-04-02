@@ -1,0 +1,60 @@
+{
+  "name": "guru-frontend-test",
+  "version": "0.2.0",
+  "private": true,
+  "homepage": "https://guruhq.github.io/guru-frontend-test",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "moment": "^2.21.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.1",
+    "react-typing": "^1.0.0",
+    "redux": "^3.7.2",
+    "redux-batched-actions": "^0.2.1",
+    "redux-devtools-extension": "^2.13.2"
+  },
+  "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "precommit": "lint-staged",
+    "clean": "rm -rf node_modules && find . -name '*.css' -type f -delete",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "yarn build-css && react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.14.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "gh-pages": "^1.1.0",
+    "husky": "^0.14.3",
+    "jest-fetch-mock": "^1.4.2",
+    "lint-staged": "^7.0.0",
+    "nock": "^9.2.3",
+    "node-sass-chokidar": "^1.1.0",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.11.1",
+    "react-test-renderer": "^16.2.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "node node_modules/prettier/index.js src/**/* --single-quote --trailing-comma 'es5' --write",
+      "git add"
+    ]
+  }
+}

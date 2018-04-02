@@ -1,0 +1,15 @@
+.Navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+  max-width: 100vw;
+  min-height: 2.5rem;
+  width: 100vw;
+
+  .Navbar__accent {
+    background-color: var(--main-color);
+    height: 6px;
+    max-width: 100vw;
+    width: 100vw;
+    width: 100%;
+  }
+}

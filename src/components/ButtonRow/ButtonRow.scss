@@ -1,0 +1,15 @@
+.ButtonRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  line-height: 0;
+  margin: 16px 0 0;
+
+  & > * {
+    margin: 8px 8px 0 0;
+  }
+
+  & > *:last-child {
+    margin: 8px 0 0 0;
+  }
+}
