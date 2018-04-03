@@ -10,8 +10,12 @@
   grid-auto-rows: 1fr;
 
   p {
-    line-height: 1;
+    line-height: 1.2rem;
     margin: 0;
+
+    * {
+      line-height: 1.2rem;
+    }
   }
 
   .Bio__image {

@@ -80,24 +80,18 @@ section {
       ========================================================================== */
 a {
   background: transparent;
-  color: #222;
-  transition: all 0.3s;
+  color: var(--main-color);
+  font-weight: 600;
+  transition: all 0.15s;
 }
 a:active,
-a:hover {
+a:hover,
+a:visited {
   outline: 0;
 }
+
 a:hover {
-  color: #222;
-}
-a:visited {
-  color: #888;
-}
-a:visited:hover {
-  color: #222;
-}
-a:active {
-  color: #f00;
+  color: var(--accent-color);
 }
 
 article {

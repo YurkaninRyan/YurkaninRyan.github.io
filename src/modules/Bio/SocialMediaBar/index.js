@@ -48,13 +48,13 @@ class SocialMediaBar extends Component {
         {icons.includes('github') && (
           <Github
             {...iconConfig}
-            onClick={openInNewTab('https://www.instagram.com/yurkaninryan/')}
+            onClick={openInNewTab('https://github.com/YurkaninRyan')}
           />
         )}
         {icons.includes('linkedin') && (
           <LinkedIn
             {...iconConfig}
-            onClick={openInNewTab('https://www.instagram.com/yurkaninryan/')}
+            onClick={openInNewTab('https://www.linkedin.com/in/yurkaninryan/')}
           />
         )}
       </div>
@@ -64,7 +64,7 @@ class SocialMediaBar extends Component {
 
 const mapStateToProps = ({ features }) => ({
   icons: features[FeatureConstants.PROFESSIONAL_BIO]
-    ? ['github', 'linkedin', 'twitter', 'resume']
+    ? ['github', 'linkedin', 'twitter']
     : ['facebook', 'twitter', 'instagram'],
 });
 

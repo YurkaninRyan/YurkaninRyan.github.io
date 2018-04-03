@@ -64,9 +64,20 @@ const PersonalList = () => (
 
 const mapStateToProps = ({ features }) => ({
   renderSubtext: () =>
-    features[FeatureConstants.PROFESSIONAL_BIO]
-      ? 'FE React Developer @GuruHQ'
-      : 'Gamer, Drummer, Programmer',
+    features[FeatureConstants.PROFESSIONAL_BIO] ? (
+      <span>
+        <span>FE React Developer </span>
+        <a
+          href="https://www.getguru.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @GuruHQ
+        </a>
+      </span>
+    ) : (
+      'Gamer, Drummer, Programmer'
+    ),
   renderList: () =>
     features[FeatureConstants.PROFESSIONAL_BIO] ? (
       <ProfessionalList />
