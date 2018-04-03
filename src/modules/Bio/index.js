@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { PureComponent } from 'react';
 
-import FeatureConstants from 'constants/FeatureConstants';
-
-import PersonalDescription from './PersonalDescription';
+import Description from './Description';
+import SocialMediaBar from './SocialMediaBar';
 
 import './Bio.css';
 
-class Bio extends Component {
+export default class Bio extends PureComponent {
   render() {
     return (
       <div className="Bio">
@@ -16,17 +14,10 @@ class Bio extends Component {
           <p>
             <strong>Ryan Yurkanin</strong>
           </p>
-          <PersonalDescription />
-          <div className="Bio__social" />
+          <Description />
+          <SocialMediaBar />
         </div>
       </div>
     );
   }
 }
-
-const mapStateToProps = ({ features }) => ({
-  professional: features[FeatureConstants.PROFESSIONAL_BIO],
-  personal: features[FeatureConstants.PERSONAL_BIO],
-});
-
-export default connect(mapStateToProps)(Bio);

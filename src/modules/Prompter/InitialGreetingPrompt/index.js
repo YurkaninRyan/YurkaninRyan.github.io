@@ -22,8 +22,8 @@ class InitialGreetingPrompt extends PureComponent {
           <strong>Oh wow, a visitor!</strong>&nbsp;<Emoji emoji="👋" />
         </p>
         <p>
-          This is awkward... there&apos;s nothing here! Could you lend a
-          hand?&nbsp;<Emoji emoji="😅" />
+          This is awkward... there&apos;s nothing here! Would you mind if we
+          built it right now?&nbsp;<Emoji emoji="😅" />
         </p>
         <ButtonRow>
           <Button secondary onClick={handleRudePerson}>

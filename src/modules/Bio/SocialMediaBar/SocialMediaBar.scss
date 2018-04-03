@@ -1,0 +1,14 @@
+.SocialMediaBar {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+
+  * {
+    margin: 0 0 0 8px;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+}

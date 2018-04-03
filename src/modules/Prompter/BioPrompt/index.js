@@ -8,7 +8,6 @@ import ButtonRow from 'components/ButtonRow';
 import Emoji from 'components/Emoji';
 
 import FeatureConstants from 'constants/FeatureConstants';
-import PromptConstants from 'constants/PromptConstants';
 
 import { unlockFeature } from 'redux/modules/features';
 import { goToPrompt } from 'redux/modules/prompts';
@@ -44,14 +43,14 @@ const mapDispatchToProps = dispatch => ({
   onAwesome: () =>
     dispatch(
       batchActions([
-        goToPrompt(PromptConstants.THEME),
+        goToPrompt(''),
         unlockFeature(FeatureConstants.PERSONAL_BIO),
       ])
     ),
   onBoring: () =>
     dispatch(
       batchActions([
-        goToPrompt(PromptConstants.THEME),
+        goToPrompt(''),
         unlockFeature(FeatureConstants.PROFESSIONAL_BIO),
       ])
     ),

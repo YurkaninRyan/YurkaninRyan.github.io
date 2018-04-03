@@ -22,6 +22,8 @@ const gray = {
 const yellow = { backgroundColor: '#FFC988', border: 'none' };
 const pink = { backgroundColor: '#FFBABE', border: 'none' };
 const green = { backgroundColor: '#AAD7A3', border: 'none' };
+const blue = { backgroundColor: '#ABDAC9', border: 'none' };
+const purple = { backgroundColor: '#C9BAD1', border: 'none' };
 
 class ThemePrompt extends PureComponent {
   render() {
@@ -32,7 +34,7 @@ class ThemePrompt extends PureComponent {
         <p>
           <strong>
             Nice!&nbsp;<Emoji emoji="🙏" /> I&apos;ve been saying I would do
-            this for almost 2 years now!
+            this for almost 2 years!
           </strong>
         </p>
         <p>
@@ -40,9 +42,11 @@ class ThemePrompt extends PureComponent {
           Which of these colors do you like?
         </p>
         <ButtonRow>
+          <Button style={blue} value="blue" onClick={onChooseTheme} />
           <Button style={yellow} value="yellow" onClick={onChooseTheme} />
           <Button style={pink} value="pink" onClick={onChooseTheme} />
           <Button style={green} value="green" onClick={onChooseTheme} />
+          <Button style={purple} value="purple" onClick={onChooseTheme} />
           <Button style={gray} value="gray" onClick={onChooseTheme} />
         </ButtonRow>
       </Fragment>

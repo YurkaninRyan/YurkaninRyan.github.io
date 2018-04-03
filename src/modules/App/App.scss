@@ -25,12 +25,22 @@
     --accent-color: darken(#ffc988, 5%);
   }
 
-  .App__accent {
-    background-color: var(--main-color);
-    height: 6px;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
+  &.is-theme-blue {
+    --main-color: #abdac9;
+    --accent-color: darken(#abdac9, 5%);
+  }
+
+  &.is-theme-purple {
+    --main-color: #c9bad1;
+    --accent-color: darken(#c9bad1, 5%);
+  }
+
+  .App__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    max-width: none;
+    padding: 24px;
+    width: 100%;
   }
 }
