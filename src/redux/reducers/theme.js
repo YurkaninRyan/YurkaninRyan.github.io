@@ -1,4 +1,4 @@
-const SET_THEME = 'ryan-yurkanin-pw/prompts/SET_THEME';
+import { types as promptTypes } from 'redux/actions/prompts';
 
 const initialState = {
   color: 'gray',
@@ -7,7 +7,7 @@ const initialState = {
 // Reducer
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
-    case SET_THEME:
+    case promptTypes.PROMPT_THEME_ANSWERED:
       return {
         ...state,
         color: action.color,
@@ -15,8 +15,4 @@ export default function reducer(state = initialState, action = {}) {
     default:
       return state;
   }
-}
-
-export function setTheme(color) {
-  return { type: SET_THEME, color };
 }

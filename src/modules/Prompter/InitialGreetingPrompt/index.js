@@ -6,15 +6,13 @@ import Button from 'components/Button';
 import ButtonRow from 'components/ButtonRow';
 import Emoji from 'components/Emoji';
 
-import PromptConstants from 'constants/PromptConstants';
-
-import { goToPrompt } from 'redux/modules/prompts';
+import { actions as promptActions } from 'redux/actions/prompts';
 
 const handleRudePerson = () => window.history.back();
 
 class InitialGreetingPrompt extends PureComponent {
   render() {
-    const { onAccept } = this.props;
+    const { onAnswer } = this.props;
 
     return (
       <Fragment>
@@ -29,7 +27,7 @@ class InitialGreetingPrompt extends PureComponent {
           <Button secondary onClick={handleRudePerson}>
             Nah.
           </Button>
-          <Button onClick={onAccept}>...Sure?</Button>
+          <Button onClick={onAnswer}>...Sure?</Button>
         </ButtonRow>
       </Fragment>
     );
@@ -38,7 +36,7 @@ class InitialGreetingPrompt extends PureComponent {
 
 const mapStateToProps = state => state;
 const mapDispatchToProps = dispatch => ({
-  onAccept: () => dispatch(goToPrompt(PromptConstants.THEME)),
+  onAnswer: () => dispatch(promptActions.answerInitialGreetingPrompt()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(
@@ -46,5 +44,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(
 );
 
 InitialGreetingPrompt.propTypes = {
-  onAccept: PropTypes.func.isRequired,
+  onAnswer: PropTypes.func.isRequired,
 };

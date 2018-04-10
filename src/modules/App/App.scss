@@ -2,7 +2,9 @@
   align-content: center;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   max-width: 100vw;
+  overflow: hidden;
   width: 100vw;
 
   &.is-theme-gray {
@@ -13,34 +15,76 @@
   &.is-theme-pink {
     --main-color: #ffbabe;
     --accent-color: darken(#ffbabe, 5%);
+
+    --git-color-0: darken(#ffbabe, 40%);
+    --git-color-1: darken(#ffbabe, 25%);
+    --git-color-2: darken(#ffbabe, 10%);
+    --git-color-3: #ffbabe;
+    --git-color-4: lighten(#ffbabe, 10%);
   }
 
   &.is-theme-green {
     --main-color: #aad7a3;
     --accent-color: darken(#aad7a3, 5%);
+
+    --git-color-0: darken(#aad7a3, 40%);
+    --git-color-1: darken(#aad7a3, 25%);
+    --git-color-2: darken(#aad7a3, 10%);
+    --git-color-3: #aad7a3;
+    --git-color-4: lighten(#aad7a3, 10%);
   }
 
   &.is-theme-yellow {
     --main-color: #ffc988;
     --accent-color: darken(#ffc988, 5%);
+
+    --git-color-0: darken(#ffc988, 40%);
+    --git-color-1: darken(#ffc988, 25%);
+    --git-color-2: darken(#ffc988, 10%);
+    --git-color-3: #ffc988;
+    --git-color-4: lighten(#ffc988, 10%);
   }
 
   &.is-theme-blue {
     --main-color: #abdac9;
     --accent-color: darken(#abdac9, 5%);
+
+    --git-color-0: darken(#abdac9, 40%);
+    --git-color-1: darken(#abdac9, 25%);
+    --git-color-2: darken(#abdac9, 10%);
+    --git-color-3: #abdac9;
+    --git-color-4: lighten(#abdac9, 10%);
   }
 
   &.is-theme-purple {
     --main-color: #c9bad1;
     --accent-color: darken(#c9bad1, 5%);
+
+    --git-color-0: darken(#c9bad1, 40%);
+    --git-color-1: darken(#c9bad1, 25%);
+    --git-color-2: darken(#c9bad1, 10%);
+    --git-color-3: #c9bad1;
+    --git-color-4: lighten(#c9bad1, 10%);
+  }
+
+  .App__scroll {
+    height: 100%;
+    height: 100vh;
+    margin: 0;
+    max-width: none;
+    overflow: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
   }
 
   .App__grid {
-    display: flex;
-    flex-wrap: wrap;
     margin: 0;
     max-width: none;
     padding: 24px;
     width: 100%;
+
+    & > * {
+      float: left;
+    }
   }
 }

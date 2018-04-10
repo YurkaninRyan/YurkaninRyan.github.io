@@ -1,7 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { batchActions } from 'redux-batched-actions';
 
 import Button from 'components/Button';
 import ButtonRow from 'components/ButtonRow';
@@ -9,12 +8,11 @@ import Emoji from 'components/Emoji';
 
 import FeatureConstants from 'constants/FeatureConstants';
 
-import { unlockFeature } from 'redux/modules/features';
-import { goToPrompt } from 'redux/modules/prompts';
+import { actions as promptActions } from 'redux/actions/prompts';
 
 class BioPrompt extends PureComponent {
   render() {
-    const { onBoring, onAwesome } = this.props;
+    const { onAnswerPersonal, onAnswerProfessional } = this.props;
 
     return (
       <Fragment>
@@ -26,10 +24,10 @@ class BioPrompt extends PureComponent {
           with who I am! Should I add some flair to my bio?&nbsp;<Emoji emoji="💁" />
         </p>
         <ButtonRow>
-          <Button secondary onClick={onAwesome}>
+          <Button secondary onClick={onAnswerPersonal}>
             Be creative!
           </Button>
-          <Button secondary onClick={onBoring}>
+          <Button secondary onClick={onAnswerProfessional}>
             Keep it strictly professional, please.
           </Button>
         </ButtonRow>
@@ -40,25 +38,15 @@ class BioPrompt extends PureComponent {
 
 const mapStateToProps = state => state;
 const mapDispatchToProps = dispatch => ({
-  onAwesome: () =>
-    dispatch(
-      batchActions([
-        goToPrompt(''),
-        unlockFeature(FeatureConstants.PERSONAL_BIO),
-      ])
-    ),
-  onBoring: () =>
-    dispatch(
-      batchActions([
-        goToPrompt(''),
-        unlockFeature(FeatureConstants.PROFESSIONAL_BIO),
-      ])
-    ),
+  onAnswerPersonal: () =>
+    dispatch(promptActions.answerBioPrompt(FeatureConstants.PERSONAL_BIO)),
+  onAnswerProfessional: () =>
+    dispatch(promptActions.answerBioPrompt(FeatureConstants.PROFESSIONAL_BIO)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BioPrompt);
 
 BioPrompt.propTypes = {
-  onBoring: PropTypes.func.isRequired,
-  onAwesome: PropTypes.func.isRequired,
+  onAnswerPersonal: PropTypes.func.isRequired,
+  onAnswerProfessional: PropTypes.func.isRequired,
 };

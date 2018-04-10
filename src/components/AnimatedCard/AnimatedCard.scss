@@ -1,0 +1,23 @@
+.AnimatedCard {
+  background-color: white;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  height: min-content;
+  margin: 0 16px 16px 0;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.5s, transform 0.25s;
+
+  &.is-entered {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  p {
+    line-height: 1.4rem;
+    margin: 0;
+
+    * {
+      line-height: 1.2rem;
+    }
+  }
+}

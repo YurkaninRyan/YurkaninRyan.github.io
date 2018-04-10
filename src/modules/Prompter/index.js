@@ -21,7 +21,7 @@ class Prompter extends Component {
       <Transition key={key} appear in={key === currentPrompt} timeout={10}>
         {state => (
           <div className={`Prompter is-${state}`}>
-            <Prompt />
+            <Prompt showing={key === currentPrompt} />
           </div>
         )}
       </Transition>

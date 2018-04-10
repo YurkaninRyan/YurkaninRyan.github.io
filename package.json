@@ -4,7 +4,9 @@
   "private": true,
   "homepage": "https://guruhq.github.io/guru-frontend-test",
   "dependencies": {
+    "axios": "^0.18.0",
     "classnames": "^2.2.5",
+    "github-calendar": "^1.2.1",
     "moment": "^2.21.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
@@ -16,7 +18,8 @@
     "react-typing": "^1.0.0",
     "redux": "^3.7.2",
     "redux-batched-actions": "^0.2.1",
-    "redux-devtools-extension": "^2.13.2"
+    "redux-saga": "^0.16.0",
+    "uuid": "^3.2.1"
   },
   "scripts": {
     "predeploy": "yarn build",
