@@ -8,7 +8,7 @@ import Emoji from 'components/Emoji';
 
 import FeatureConstants from 'constants/FeatureConstants';
 
-import { actions as promptActions } from 'redux/actions/prompts';
+import prompts from 'redux/actions/prompts';
 
 class BioPrompt extends PureComponent {
   render() {
@@ -39,9 +39,9 @@ class BioPrompt extends PureComponent {
 const mapStateToProps = state => state;
 const mapDispatchToProps = dispatch => ({
   onAnswerPersonal: () =>
-    dispatch(promptActions.answerBioPrompt(FeatureConstants.PERSONAL_BIO)),
+    dispatch(prompts.answerBio(FeatureConstants.PERSONAL_BIO)),
   onAnswerProfessional: () =>
-    dispatch(promptActions.answerBioPrompt(FeatureConstants.PROFESSIONAL_BIO)),
+    dispatch(prompts.answerBio(FeatureConstants.PROFESSIONAL_BIO)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BioPrompt);

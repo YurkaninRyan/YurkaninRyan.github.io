@@ -6,7 +6,7 @@ import Button from 'components/Button';
 import ButtonRow from 'components/ButtonRow';
 import Emoji from 'components/Emoji';
 
-import { actions as promptActions } from 'redux/actions/prompts';
+import prompts from 'redux/actions/prompts';
 
 const handleRudePerson = () => window.history.back();
 
@@ -36,7 +36,7 @@ class InitialGreetingPrompt extends PureComponent {
 
 const mapStateToProps = state => state;
 const mapDispatchToProps = dispatch => ({
-  onAnswer: () => dispatch(promptActions.answerInitialGreetingPrompt()),
+  onAnswer: () => dispatch(prompts.answerInitialGreeting()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(

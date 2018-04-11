@@ -9,7 +9,7 @@ import CheckboxColumn from 'components/CheckboxColumn';
 
 import FeatureConstants from 'constants/FeatureConstants';
 
-import { actions as promptActions } from 'redux/actions/prompts';
+import prompts from 'redux/actions/prompts';
 
 function renderPersonalTitle() {
   return (
@@ -118,8 +118,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onAddMoreFeatures: features =>
-    dispatch(promptActions.answerMoreFeaturesPrompt(features)),
+  onAddMoreFeatures: features => dispatch(prompts.answerMoreFeatures(features)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MoreFeaturesPrompt);

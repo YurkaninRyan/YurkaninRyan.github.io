@@ -1,36 +1,30 @@
 import PromptConstants from 'constants/PromptConstants';
 
-import { types as promptTypes } from 'redux/actions/prompts';
+import handleActions from 'redux/handleActions';
 
 const initialState = {
-  current: PromptConstants.INITIAL_GREETING,
+  prompt: PromptConstants.INITIAL_GREETING,
 };
 
-// Reducer
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
-    case promptTypes.PROMPT_INITIAL_GREETING_ANSWERED: {
-      return {
+export default handleActions(
+  {
+    PROMPTS: {
+      GO_TO: (state, action) => ({ ...state, prompt: action.payload.prompt }),
+      ANSWER_INITIAL_GREETING: state => ({
         ...state,
-        current: PromptConstants.THEME,
-      };
-    }
-
-    case promptTypes.PROMPT_THEME_ANSWERED: {
-      return {
+        prompt: PromptConstants.THEME,
+      }),
+      ANSWER_THEME: state => ({
         ...state,
-        current: PromptConstants.BIO,
-      };
-    }
-
-    case promptTypes.PROMPT_GOTO: {
-      return {
+        prompt: PromptConstants.BIO,
+      }),
+      ANSWER_MORE_FEATURES: state => ({
         ...state,
-        current: action.prompt,
-      };
-    }
+        prompt: null,
+      }),
+    },
+  },
+  initialState
+);
 
-    default:
-      return state;
-  }
-}
+export const getPrompt = state => state.prompts.prompt;

@@ -17,6 +17,7 @@
     "react-transition-group": "^2.3.0",
     "react-typing": "^1.0.0",
     "redux": "^3.7.2",
+    "redux-actions": "^2.3.0",
     "redux-batched-actions": "^0.2.1",
     "redux-saga": "^0.16.0",
     "uuid": "^3.2.1"

@@ -1,6 +1,6 @@
 import FeatureConstants from 'constants/FeatureConstants';
 
-import { types as promptTypes } from 'redux/actions/prompts';
+import handleActions from 'redux/handleActions';
 
 const initialState = Object.keys(FeatureConstants).reduce(
   (features, key) => ({
@@ -10,24 +10,22 @@ const initialState = Object.keys(FeatureConstants).reduce(
   {}
 );
 
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
-    case promptTypes.PROMPT_THEME_ANSWERED:
-      return {
+export default handleActions(
+  {
+    PROMPTS: {
+      ANSWER_THEME: state => ({
         ...state,
         [FeatureConstants.NAVBAR]: true,
-      };
-    case promptTypes.PROMPT_BIO_ANSWERED:
-      return {
+      }),
+      ANSWER_BIO: (state, action) => ({
         ...state,
-        [action.feature]: true,
-      };
-    case promptTypes.PROMPT_MORE_FEATURES_ANSWERED:
-      return {
+        [action.payload.feature]: true,
+      }),
+      ANSWER_MORE_FEATURES: (state, action) => ({
         ...state,
-        ...action.features,
-      };
-    default:
-      return state;
-  }
-}
+        ...action.payload.features,
+      }),
+    },
+  },
+  initialState
+);

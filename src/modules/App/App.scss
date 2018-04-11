@@ -20,7 +20,6 @@
     --git-color-1: darken(#ffbabe, 25%);
     --git-color-2: darken(#ffbabe, 10%);
     --git-color-3: #ffbabe;
-    --git-color-4: lighten(#ffbabe, 10%);
   }
 
   &.is-theme-green {
@@ -31,7 +30,6 @@
     --git-color-1: darken(#aad7a3, 25%);
     --git-color-2: darken(#aad7a3, 10%);
     --git-color-3: #aad7a3;
-    --git-color-4: lighten(#aad7a3, 10%);
   }
 
   &.is-theme-yellow {
@@ -42,7 +40,6 @@
     --git-color-1: darken(#ffc988, 25%);
     --git-color-2: darken(#ffc988, 10%);
     --git-color-3: #ffc988;
-    --git-color-4: lighten(#ffc988, 10%);
   }
 
   &.is-theme-blue {
@@ -53,7 +50,6 @@
     --git-color-1: darken(#abdac9, 25%);
     --git-color-2: darken(#abdac9, 10%);
     --git-color-3: #abdac9;
-    --git-color-4: lighten(#abdac9, 10%);
   }
 
   &.is-theme-purple {
@@ -64,7 +60,6 @@
     --git-color-1: darken(#c9bad1, 25%);
     --git-color-2: darken(#c9bad1, 10%);
     --git-color-3: #c9bad1;
-    --git-color-4: lighten(#c9bad1, 10%);
   }
 
   .App__scroll {
@@ -82,6 +77,12 @@
     max-width: none;
     padding: 24px;
     width: 100%;
+
+    &:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
 
     & > * {
       float: left;

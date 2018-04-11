@@ -1,18 +1,17 @@
-import { types as promptTypes } from 'redux/actions/prompts';
+import handleActions from 'redux/handleActions';
 
 const initialState = {
   color: 'gray',
 };
 
-// Reducer
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
-    case promptTypes.PROMPT_THEME_ANSWERED:
-      return {
+export default handleActions(
+  {
+    PROMPTS: {
+      ANSWER_THEME: (state, action) => ({
         ...state,
-        color: action.color,
-      };
-    default:
-      return state;
-  }
-}
+        color: action.payload.color,
+      }),
+    },
+  },
+  initialState
+);

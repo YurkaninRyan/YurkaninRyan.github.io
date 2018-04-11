@@ -6,7 +6,7 @@ import Button from 'components/Button';
 import ButtonRow from 'components/ButtonRow';
 import Emoji from 'components/Emoji';
 
-import { actions as promptActions } from 'redux/actions/prompts';
+import prompts from 'redux/actions/prompts';
 
 const gray = {
   backgroundColor: 'hsl(0, 0%, 97%)',
@@ -50,7 +50,7 @@ class ThemePrompt extends PureComponent {
 
 const mapStateToProps = state => state;
 const mapDispatchToProps = dispatch => ({
-  onAnswerTheme: e => dispatch(promptActions.answerThemePrompt(e.target.value)),
+  onAnswerTheme: e => dispatch(prompts.answerTheme(e.target.value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ThemePrompt);
