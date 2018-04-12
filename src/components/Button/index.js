@@ -6,9 +6,9 @@ import './Button.css';
 
 export default class Button extends Component {
   render() {
-    const { children, secondary, ...props } = this.props;
+    const { children, className, secondary, ...props } = this.props;
 
-    const containerClass = classNames('Button', {
+    const containerClass = classNames('Button', className, {
       'is-secondary': secondary,
     });
 
@@ -23,9 +23,11 @@ export default class Button extends Component {
 Button.propTypes = {
   children: PropTypes.node,
   secondary: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 Button.defaultProps = {
   secondary: false,
   children: null,
+  className: '',
 };

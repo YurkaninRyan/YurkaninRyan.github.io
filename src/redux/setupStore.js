@@ -1,6 +1,7 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
+import articles from 'redux/reducers/articles';
 import features from 'redux/reducers/features';
 import prompts from 'redux/reducers/prompts';
 import theme from 'redux/reducers/theme';
@@ -20,6 +21,7 @@ const reduxDevTools =
 /* eslint-enable no-underscore-dangle */
 
 const reducers = combineReducers({
+  articles,
   features,
   prompts,
   theme,

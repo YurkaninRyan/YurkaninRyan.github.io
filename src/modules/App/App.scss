@@ -8,8 +8,13 @@
   width: 100vw;
 
   &.is-theme-gray {
-    --main-color: hsl(0, 0%, 97%);
-    --accent-color: darken(hsl(0, 0%, 97%), 10%);
+    --main-color: #f5f8f9;
+    --accent-color: darken(#f5f8f9, 5%);
+
+    --git-color-0: darken(#f5f8f9, 40%);
+    --git-color-1: darken(#f5f8f9, 25%);
+    --git-color-2: darken(#f5f8f9, 10%);
+    --git-color-3: #f5f8f9;
   }
 
   &.is-theme-pink {
@@ -73,19 +78,11 @@
   }
 
   .App__grid {
-    margin: 0;
-    max-width: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 100em;
     padding: 24px;
     width: 100%;
-
-    &:after {
-      clear: both;
-      content: "";
-      display: table;
-    }
-
-    & > * {
-      float: left;
-    }
   }
 }
