@@ -4,6 +4,7 @@ import createSagaMiddleware from 'redux-saga';
 import articles from 'redux/reducers/articles';
 import features from 'redux/reducers/features';
 import prompts from 'redux/reducers/prompts';
+import repos from 'redux/reducers/repos';
 import theme from 'redux/reducers/theme';
 
 import sagas from 'redux/sagas';
@@ -24,6 +25,7 @@ const reducers = combineReducers({
   articles,
   features,
   prompts,
+  repos,
   theme,
 });
 

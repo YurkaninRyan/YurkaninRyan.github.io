@@ -26,9 +26,7 @@ export default class Bio extends PureComponent {
       <AnimatedCard in={enabled} className="Bio">
         <div role="img" style={style} className="Bio__image" />
         <div className="Bio__details">
-          <p>
-            <strong>{name}</strong>
-          </p>
+          <h1 className="Bio__name">{name}</h1>
           <Description points={points} renderSubtext={renderSubtext} />
           {hasSocial && <SocialMediaBar />}
         </div>

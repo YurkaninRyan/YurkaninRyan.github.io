@@ -12,7 +12,7 @@ import RyanBio from 'containers/RyanBio';
 
 import Articles from 'modules/Articles';
 import GitActivity from 'modules/GitActivity';
-import OpenSource from 'modules/OpenSource';
+import Repos from 'modules/Repos';
 import Prompter from 'modules/Prompter';
 
 import './App.css';
@@ -25,7 +25,7 @@ class App extends PureComponent {
       hasBio,
       hasGitActivity,
       hasArticles,
-      hasOpenSource,
+      hasRepos,
       hasDogBio,
     } = this.props;
 
@@ -39,7 +39,7 @@ class App extends PureComponent {
             <RyanBio enabled={hasBio} />
             <GitActivity enabled={hasGitActivity} />
             <Articles enabled={hasArticles} />
-            <OpenSource enabled={hasOpenSource} />
+            <Repos enabled={hasRepos} />
             <PepeBio enabled={hasDogBio} />
           </div>
         </div>
@@ -58,7 +58,7 @@ const mapStateToProps = ({ theme, features }) => ({
   hasDogBio: features[FeatureConstants.DOG_BIO],
   hasGitActivity: features[FeatureConstants.GIT_ACTIVITY],
   hasArticles: features[FeatureConstants.ARTICLES],
-  hasOpenSource: features[FeatureConstants.OPEN_SOURCE],
+  hasRepos: features[FeatureConstants.REPOS],
 });
 
 export default connect(mapStateToProps)(App);
@@ -70,5 +70,5 @@ App.propTypes = {
   hasDogBio: PropTypes.bool.isRequired,
   hasGitActivity: PropTypes.bool.isRequired,
   hasArticles: PropTypes.bool.isRequired,
-  hasOpenSource: PropTypes.bool.isRequired,
+  hasRepos: PropTypes.bool.isRequired,
 };

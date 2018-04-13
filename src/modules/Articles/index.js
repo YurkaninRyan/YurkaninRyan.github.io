@@ -20,13 +20,20 @@ class Articles extends Component {
   constructor() {
     super();
 
+    this.fetch = this.fetch.bind(this);
     this.renderArticles = this.renderArticles.bind(this);
   }
 
   componentDidMount() {
-    const { status, getArticles } = this.props;
+    this.fetch();
+  }
+  componentDidUpdate() {
+    this.fetch();
+  }
 
-    if (status !== StatusConstants.NOT_LOADED) {
+  fetch() {
+    const { enabled, status, getArticles } = this.props;
+    if (!enabled || status !== StatusConstants.NOT_LOADED) {
       return;
     }
 

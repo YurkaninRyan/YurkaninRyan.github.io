@@ -3,10 +3,16 @@
   padding: 16px;
   width: 100%;
 
+  & > div {
+    // Github calendar adds a min height for some reason.
+    min-height: auto !important;
+  }
+
   h2 {
     font-size: 1.2rem;
     font-weight: 700;
-    margin: 0 0 8px;
+    line-height: 1.2rem;
+    margin: 0 0 16px;
   }
 
   * {
@@ -19,7 +25,6 @@
     border-radius: 3px;
     font-family: Helvetica, arial;
     margin: 0 auto;
-    min-height: 243px;
     text-align: center;
   }
 

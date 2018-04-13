@@ -1,8 +1,8 @@
 {
-  "name": "guru-frontend-test",
+  "name": "yurkaninryan.github.io",
   "version": "0.2.0",
   "private": true,
-  "homepage": "https://guruhq.github.io/guru-frontend-test",
+  "homepage": "https://yurkaninryan.github.io",
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.5",

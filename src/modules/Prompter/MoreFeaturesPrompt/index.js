@@ -41,7 +41,7 @@ class MoreFeaturesPrompt extends PureComponent {
       checkboxes: {
         [FeatureConstants.DOG_BIO]: false,
         [FeatureConstants.GIT_ACTIVITY]: false,
-        [FeatureConstants.OPEN_SOURCE]: false,
+        [FeatureConstants.REPOS]: false,
         [FeatureConstants.ARTICLES]: false,
       },
     };
@@ -92,8 +92,8 @@ class MoreFeaturesPrompt extends PureComponent {
           />
           <Checkbox
             label="My open source projects or projects I help maintain"
-            value={FeatureConstants.OPEN_SOURCE}
-            checked={checkboxes[FeatureConstants.OPEN_SOURCE]}
+            value={FeatureConstants.REPOS}
+            checked={checkboxes[FeatureConstants.REPOS]}
             onChange={this.handleChecked}
           />
           <Checkbox

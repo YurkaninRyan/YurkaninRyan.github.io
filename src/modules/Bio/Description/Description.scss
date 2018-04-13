@@ -2,13 +2,12 @@
   line-height: 0;
 
   .Description__subtext {
-    border-bottom: 1px solid gray;
     bottom: 0;
     color: gray;
     display: block;
-    line-height: 1.2rem;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
     margin: 0 0 16px;
-    padding: 0 0 8px;
 
     * {
       line-height: 1.2rem;
