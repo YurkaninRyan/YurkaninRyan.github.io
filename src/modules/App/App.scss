@@ -78,8 +78,11 @@
   }
 
   .App__grid {
+    align-content: center;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 0 auto;
     max-width: 100em;
     padding: 24px;
