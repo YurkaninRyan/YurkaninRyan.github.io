@@ -1,7 +1,13 @@
 {
-  "main.css": "static/css/main.bc248a89.css",
-  "main.js": "static/js/main.e68e48e4.js",
+  "main.css": "static/css/main.b070bd9f.css",
+  "main.js": "static/js/main.de82590c.js",
   "static/media/PepeYurkanin.jpg": "static/media/PepeYurkanin.b9d5719f.jpg",
   "static/media/RyanYurkanin.jpg": "static/media/RyanYurkanin.22085215.jpg",
+  "static/media/favicon-blue.ico": "static/media/favicon-blue.4413cb34.ico",
+  "static/media/favicon-gray.ico": "static/media/favicon-gray.bbe3567a.ico",
+  "static/media/favicon-green.ico": "static/media/favicon-green.946723c3.ico",
+  "static/media/favicon-orange.ico": "static/media/favicon-orange.09ab15da.ico",
+  "static/media/favicon-pink.ico": "static/media/favicon-pink.0f351abb.ico",
+  "static/media/favicon-purple.ico": "static/media/favicon-purple.14c6db90.ico",
   "static/media/happy-clapping.gif": "static/media/happy-clapping.2fe6bdd4.gif"
 }
