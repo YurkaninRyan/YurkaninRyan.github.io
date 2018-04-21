@@ -17,8 +17,7 @@ import {
 const sagaMiddleware = createSagaMiddleware();
 
 /* eslint-disable no-underscore-dangle */
-const reduxDevTools =
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 /* eslint-enable no-underscore-dangle */
 
 const reducers = combineReducers({
@@ -36,7 +35,7 @@ const initialState = window.localStorage.getItem('debugging')
 const store = createStore(
   reducers,
   initialState,
-  compose(applyMiddleware(sagaMiddleware), reduxDevTools)
+  composeEnhancers(applyMiddleware(sagaMiddleware))
 );
 
 store.subscribe(() => {

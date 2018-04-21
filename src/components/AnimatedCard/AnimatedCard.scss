@@ -7,9 +7,17 @@
   transform: scale(0);
   transition: opacity 0.5s, transform 0.25s;
 
+  &.is-entering {
+    display: block;
+  }
+
   &.is-entered {
     opacity: 1;
     transform: scale(1);
+  }
+
+  &.is-exited {
+    display: none;
   }
 
   p {

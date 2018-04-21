@@ -1,2 +1,5 @@
+import find from 'lodash/find';
+
 export default article =>
-  article.previewContent.bodyModel.paragraphs[0].metadata.id;
+  find(article.previewContent.bodyModel.paragraphs, p => p.metadata).metadata
+    .id;

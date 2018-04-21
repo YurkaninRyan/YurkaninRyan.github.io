@@ -47,15 +47,17 @@ class Articles extends Component {
       return 'Loading Articles...';
     }
 
-    return articles.map(article => (
-      <Article
-        key={article.slug}
-        title={article.title}
-        preview={article.content.subtitle}
-        image={getArticleImageId(article)}
-        url={getArticlePostURL(article)}
-      />
-    ));
+    return articles
+      .slice(0, 3)
+      .map(article => (
+        <Article
+          key={article.slug}
+          title={article.title}
+          preview={article.content.subtitle}
+          image={getArticleImageId(article)}
+          url={getArticlePostURL(article)}
+        />
+      ));
   }
 
   render() {

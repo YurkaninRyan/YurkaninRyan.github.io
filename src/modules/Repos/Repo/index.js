@@ -31,9 +31,9 @@ Repo.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  stars: PropTypes.number,
+  stars: PropTypes.string,
 };
 
 Repo.defaultProps = {
-  stars: 0,
+  stars: '0',
 };

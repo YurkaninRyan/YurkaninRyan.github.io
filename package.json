@@ -7,6 +7,7 @@
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
     "github-calendar": "^1.2.1",
+    "lodash": "^4.17.5",
     "moment": "^2.21.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
@@ -28,10 +29,8 @@
     "deploy": "gh-pages -b master -d build",
     "precommit": "lint-staged",
     "clean": "rm -rf node_modules && find . -name '*.css' -type f -delete",
-    "build-css":
-      "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css":
-      "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "GENERATE_SOURCEMAP=false react-scripts build",
